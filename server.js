@@ -23,4 +23,9 @@ app.use(express.json())
 
 //router routes
 app.use('/', homeRoutes)
-app.use('/runTodos',)
+app.use('/runTodos', todoRoutes )
+
+//Listen Method
+app.listen(PORT, ()=>{
+    console.log(`The Server is running on ${PORT} use ^c to chill server`)
+})
