@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8000
 
 // router variables
 const homeRoutes = require('./routes/home')
-const todoRoutes = require('./routes/runTodos')
+const todoRoutes = require('./routes/todospage')
 
 //DB connection
 dotenv.config({path: './config/.env'})
