@@ -23,7 +23,7 @@ app.use(express.json())
 
 //router routes
 app.use('/', homeRoutes)
-app.use('/runTodos', todoRoutes )
+app.use('/todospage', todoRoutes )
 
 //Listen Method
 app.listen(PORT, ()=>{
