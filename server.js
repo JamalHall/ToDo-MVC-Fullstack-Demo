@@ -6,8 +6,8 @@ const dotenv = require('dotenv')
 const PORT = process.env.PORT || 8000
 
 // router variables
-const homeRoutes = require('./routes/home')
-const todoRoutes = require('./routes/todospage')
+const homeRoutes = require('./routes/homeRoute')
+const todoRoutes = require('./routes/todoRoute')
 
 //DB connection
 dotenv.config({path: './config/.env'})
@@ -23,7 +23,7 @@ app.use(express.json())
 
 //router routes
 app.use('/', homeRoutes)
-app.use('/todospage', todoRoutes )
+app.use('/todos', todoRoutes )
 
 //Listen Method
 app.listen(PORT, ()=>{
