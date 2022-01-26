@@ -5,9 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/public/css/style.css">
+
 </head>
 <body>
+    <h1>TODO List MVC Demo</h1>
+    <ul class="listItems"> <!-- listed task updated with ejs from server-->
+    
+        <h2>Current Task</h2>
+    
+        <% todoItems.forEach(element => { %>   
+    
+            <li class='item' data-id='<%=element._id%>'>
+    
+            <span class='fa fa-circle-notch'> </span>             
+            
+            <span id = "off" class='itm' ><%= element.task %></span>
+            
+            <span class='dte' ><%= newDate %></span>
+            
+            <span class='fa fa-trash'>delete</span>
+            
+            <span class='stat'><%= element.complete %></span>
+            
+            
+            <!-- The todos variable is the data from the fetch the variable is declared in and passed from the controller   -->
+        </li>
+
+    <% }) %>
+   
+    
+</ul>
+    
+    <h3><span> Task remaining: </span> <span class='tot'> <%= left %>   </span></h3>
+    
+    <h3>Add A Task:</h3>  
+    
+    <form action="/todos/createTodo" method="POST">
+         <input type="text" placeholder=" Task" name="todoFormItem">
+         <input type="date" placeholder="Finish By" name="formDate">
+         <input type="submit" >
+     </form>
+    
     
 
     
