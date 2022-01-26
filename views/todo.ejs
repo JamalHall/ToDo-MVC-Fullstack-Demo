@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>
@@ -20,16 +20,15 @@
     
             <li class='item' data-id='<%=element._id%>'>
     
-            <span class='fa fa-circle-notch'> </span>             
-            
             <span id = "off" class='itm' ><%= element.task %></span>
             
             <span class='dte' ><%= newDate %></span>
             
-            <span class='fa fa-trash'>delete</span>
+            <span class='trash fa fa-trash'>delete</span>
             
             <span class='stat'><%= element.complete %></span>
-            
+
+            <span class='stat fa fa-circle-notch'> </span>
             
             <!-- The todos variable is the data from the fetch the variable is declared in and passed from the controller   -->
         </li>
@@ -52,6 +51,6 @@
     
 
     
-    <script src="/public/js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
