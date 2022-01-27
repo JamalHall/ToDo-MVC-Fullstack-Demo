@@ -27,7 +27,7 @@ function setEvent(event){
     let name = this.parentElement.childNodes[1].innerText
 try {
     if(event.path[0].innerText!=='delete'){
-       serverUpdate(id,status)} else serverDelete(id,name)    
+       serverUpdate(id,status)} else serverDelete(id,name)  //conditional to select put or delete method  
     } catch (error) {
         console.log(error)
     }    
